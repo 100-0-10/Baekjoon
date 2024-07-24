@@ -1,10 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
 
@@ -17,13 +14,13 @@ public class Main {
         int N = Integer.parseInt(st1.nextToken());
         int K = Integer.parseInt(st1.nextToken());
 
-        List<Integer> list = new ArrayList<>();
-        while (st2.hasMoreTokens()) {
-            list.add(Integer.parseInt(st2.nextToken()));
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(st2.nextToken());
         }
 
-        Collections.sort(list);
+        Arrays.sort(arr);
 
-        System.out.println(list.get(K-1));
+        System.out.println(arr[K-1]);
     }
 }
